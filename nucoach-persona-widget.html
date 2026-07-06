@@ -1,0 +1,121 @@
+<!-- NuCoach Persona Switcher — paste into Elementor HTML widget -->
+<style>
+  #nucoach-persona{font-family:'Inter',sans-serif;max-width:1140px;margin:0 auto;padding:32px 24px}
+  #nucoach-persona .nc-panel{background:rgba(255,255,255,.05);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:32px}
+  #nucoach-persona .nc-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+  #nucoach-persona .nc-tab{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;border:none;cursor:pointer;transition:all .25s;background:transparent;color:rgba(255,255,255,.7)}
+  #nucoach-persona .nc-tab:hover{color:#fff;background:rgba(255,255,255,.1)}
+  #nucoach-persona .nc-tab.active{background:#f98700;color:#fff;box-shadow:0 8px 24px rgba(249,135,0,.25)}
+  #nucoach-persona .nc-content{min-height:200px}
+  #nucoach-persona .nc-headline{font-family:'Cardo',serif;font-size:30px;font-weight:700;color:#fff;margin:0 0 12px;line-height:1.2}
+  #nucoach-persona .nc-subtext{font-size:17px;color:#aeb8c7;line-height:1.6;margin:0 0 24px}
+  #nucoach-persona .nc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+  #nucoach-persona .nc-stat-value{font-size:30px;font-weight:700;color:#ffbf66;line-height:1}
+  #nucoach-persona .nc-stat-label{font-size:13px;color:#aeb8c7;margin-top:4px}
+  #nucoach-persona .nc-features{list-style:none;padding:0;margin:0}
+  #nucoach-persona .nc-feature{display:flex;align-items:flex-start;gap:8px;font-size:14px;color:#aeb8c7;line-height:1.6;margin-bottom:8px}
+  #nucoach-persona .nc-feature::before{content:'\2726';color:#10d1e5;font-size:12px;margin-top:3px;flex-shrink:0}
+  #nucoach-persona .nc-pane{display:none}
+  #nucoach-persona .nc-pane.active{display:block}
+  @media(max-width:767px){
+    #nucoach-persona .nc-headline{font-size:24px}
+    #nucoach-persona .nc-stats{grid-template-columns:1fr;gap:12px}
+    #nucoach-persona .nc-stat-value{font-size:24px}
+    #nucoach-persona .nc-panel{padding:20px}
+  }
+</style>
+
+<div id="nucoach-persona">
+  <div class="nc-panel">
+    <div class="nc-tabs">
+      <button class="nc-tab active" data-pane="chro">CHRO / CLO</button>
+      <button class="nc-tab" data-pane="cro">CRO</button>
+      <button class="nc-tab" data-pane="cxo">CXO</button>
+      <button class="nc-tab" data-pane="partner">HR Consulting / Training</button>
+    </div>
+
+    <div class="nc-content">
+
+      <!-- CHRO / CLO -->
+      <div class="nc-pane active" id="pane-chro">
+        <h2 class="nc-headline">Develop leaders at scale with AI-powered coaching</h2>
+        <p class="nc-subtext">Accelerate manager readiness, build leadership pipelines, and measure skill growth — all without adding headcount to your L&D team.</p>
+        <div class="nc-stats">
+          <div><div class="nc-stat-value">3x</div><div class="nc-stat-label">faster manager readiness</div></div>
+          <div><div class="nc-stat-value">40%</div><div class="nc-stat-label">reduction in coaching costs</div></div>
+          <div><div class="nc-stat-value">85%</div><div class="nc-stat-label">skill adoption rate</div></div>
+        </div>
+        <ul class="nc-features">
+          <li class="nc-feature">AI roleplay simulations for tough conversations, performance reviews, and DE&amp;Q scenarios</li>
+          <li class="nc-feature">Personalized development paths that adapt to each leader's gaps</li>
+          <li class="nc-feature">Real-time analytics on skill progression across your organization</li>
+        </ul>
+      </div>
+
+      <!-- CRO -->
+      <div class="nc-pane" id="pane-cro">
+        <h2 class="nc-headline">Shorten rep ramp time and lift win rates</h2>
+        <p class="nc-subtext">Give every seller unlimited practice with AI buyer personas, objection drills, and deal coaching — so they perform from day one.</p>
+        <div class="nc-stats">
+          <div><div class="nc-stat-value">50%</div><div class="nc-stat-label">faster rep ramp time</div></div>
+          <div><div class="nc-stat-value">22%</div><div class="nc-stat-label">increase in win rates</div></div>
+          <div><div class="nc-stat-value">3x</div><div class="nc-stat-label">more practice reps per week</div></div>
+        </div>
+        <ul class="nc-features">
+          <li class="nc-feature">AI buyer personas that adapt objections based on industry, role, and deal stage</li>
+          <li class="nc-feature">Scenario-based negotiation and discovery call practice</li>
+          <li class="nc-feature">Manager dashboards showing readiness scores before reps go live</li>
+        </ul>
+      </div>
+
+      <!-- CXO -->
+      <div class="nc-pane" id="pane-cxo">
+        <h2 class="nc-headline">Maximize ROI on every training dollar</h2>
+        <p class="nc-subtext">Replace one-size-fits-all training with measurable, AI-driven capability building that scales across every function and geography.</p>
+        <div class="nc-stats">
+          <div><div class="nc-stat-value">60%</div><div class="nc-stat-label">lower cost per learner</div></div>
+          <div><div class="nc-stat-value">4x</div><div class="nc-stat-label">training coverage</div></div>
+          <div><div class="nc-stat-value">100K+</div><div class="nc-stat-label">learners on CALF&#8482; platform</div></div>
+        </div>
+        <ul class="nc-features">
+          <li class="nc-feature">Enterprise-grade platform built on NuVeda's CALF&#8482; — trusted across 60+ countries</li>
+          <li class="nc-feature">SSO/SCIM, HRIS/LMS/CRM integrations, and data residency compliance</li>
+          <li class="nc-feature">Unified analytics across all programs, cohorts, and business units</li>
+        </ul>
+      </div>
+
+      <!-- HR Consulting / Training -->
+      <div class="nc-pane" id="pane-partner">
+        <h2 class="nc-headline">Scale your coaching practice with AI</h2>
+        <p class="nc-subtext">Offer AI-powered simulations to your clients without building technology — grow revenue, reach, and differentiation.</p>
+        <div class="nc-stats">
+          <div><div class="nc-stat-value">2x</div><div class="nc-stat-label">client engagement</div></div>
+          <div><div class="nc-stat-value">40%</div><div class="nc-stat-label">revenue share</div></div>
+          <div><div class="nc-stat-value">0</div><div class="nc-stat-label">tech investment required</div></div>
+        </div>
+        <ul class="nc-features">
+          <li class="nc-feature">White-label AI simulations branded to your consulting practice</li>
+          <li class="nc-feature">Co-selling and co-marketing support from the NuCoach team</li>
+          <li class="nc-feature">Rapid pilot deployment — get your first client live in weeks</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var w=document.getElementById('nucoach-persona');
+  if(!w)return;
+  w.querySelectorAll('.nc-tab').forEach(function(tab){
+    tab.addEventListener('click',function(){
+      w.querySelectorAll('.nc-tab').forEach(function(t){t.classList.remove('active')});
+      w.querySelectorAll('.nc-pane').forEach(function(p){p.classList.remove('active')});
+      tab.classList.add('active');
+      var pane=document.getElementById('pane-'+tab.getAttribute('data-pane'));
+      if(pane)pane.classList.add('active');
+    });
+  });
+})();
+</script>

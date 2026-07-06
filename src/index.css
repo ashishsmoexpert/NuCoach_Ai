@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply font-sans text-navy-900 bg-white;
+  }
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+  .gradient-hero {
+    background: linear-gradient(135deg, #111111 0%, #1f2937 40%, #020817 100%);
+    background-size: 200% 200%;
+  }
+  .gradient-accent {
+    background: linear-gradient(135deg, #f98700 0%, #00b7c7 100%);
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #f98700 0%, #00b7c7 100%);
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded-full font-roboto font-bold text-base text-white
+           bg-accent-500 hover:bg-accent-600 transition-all duration-200
+           shadow-lg shadow-accent-500/25 hover:shadow-xl hover:shadow-accent-500/30
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded-full font-roboto font-bold text-base
+           text-navy-900 bg-white border border-navy-300 hover:border-navy-400
+           transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-2.5 rounded-full font-roboto font-medium text-base
+           text-navy-600 hover:text-navy-900 hover:bg-navy-50 transition-all duration-200;
+  }
+  .card {
+    @apply bg-white rounded-2xl border border-navy-100 p-6 md:p-8
+           hover:shadow-lg hover:border-navy-200 transition-all duration-300;
+  }
+  .card-dark {
+    @apply bg-navy-950 rounded-2xl p-6 md:p-8 text-white;
+  }
+  .section-label {
+    @apply text-sm font-roboto font-medium uppercase tracking-wider text-accent-500;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold font-serif text-navy-900 leading-tight;
+  }
+  .section-subtitle {
+    @apply text-lg md:text-xl text-navy-500 max-w-2xl leading-relaxed font-sans;
+  }
+}
+
+@layer utilities {
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+::selection {
+  background-color: #f98700;
+  color: white;
+}
+
+/* Calendly embed fix */
+.calendly-inline-widget {
+  min-width: 320px;
+  height: 700px;
+}
